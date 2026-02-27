@@ -233,12 +233,11 @@ img {
         height: 60px;
     }
 
-    /* Stack layout instead of side-by-side */
     #content,
-
-
-    /* Navigation menu */
-    #pages,
+    #pages {
+        width: 100%;
+        height: auto;
+    }
 
 
     .btn-light,
