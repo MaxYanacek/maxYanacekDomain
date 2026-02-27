@@ -210,10 +210,21 @@ img {
    MOBILE STYLES
    ========================= */
 @media (max-width: 768px) {
+    .menuBarClass {
+        height: 32px;
+        width: auto;
+        margin-right: auto;
+    }
 
-    /* Top bar */
+    #notInMenu {
+        padding: 8px;
+    }
+
+    /* Shrink top bar */
     #topBar {
         height: auto;
+        min-height: 56px;
+        align-items: center;
         padding: 10px;
         justify-content: center;
     }
@@ -224,19 +235,11 @@ img {
 
     /* Stack layout instead of side-by-side */
     #content,
-    #about {
-        flex-direction: column;
-        align-items: center;
-    }
+
 
     /* Navigation menu */
     #pages,
-    #menu {
-        width: 100%;
-        height: auto;
-        flex-wrap: wrap;
-        padding: 10px;
-    }
+
 
     .btn-light,
     .btn-light2 {
@@ -260,23 +263,6 @@ img {
         object-fit: cover;
     }
 
-    /* About page layout */
-    #aboutText {
-        padding: 5%;
-        font-size: 1rem;
-    }
-
-    #section {
-        width: 100%;
-        padding: 5%;
-        text-align: center;
-    }
-
-    #profilePic {
-        max-width: 300px;
-        margin: auto;
-    }
-
     /* Footer */
     #horizontalFooter {
         flex-direction: column;
@@ -290,10 +276,47 @@ img {
 
     #menu {
         display: none;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        background-color: #ffcb08;
+        z-index: 999;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
     }
-
     #menu.active {
         display: flex;
         flex-direction: column;
+    }
+    #menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding-top: 10px;
+    }
+    #aboutText {
+        width: 100%;
+        padding: 16px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    #section {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+    }
+
+    #profilePic {
+        max-width: 250px;
+        margin: 0 auto 12px;
     }
 }
