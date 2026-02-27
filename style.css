@@ -1,7 +1,10 @@
-html, body {
-    height: 100%;
-    margin: 0;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+
 a {
     color: inherit !important;
     text-decoration: none !important;
@@ -62,6 +65,7 @@ h4{
     width: 100%;
     height: 100%;
     padding: 0;
+    flex: 1;
 }
 #content{
     flex: 1;
@@ -223,19 +227,19 @@ img {
         margin-right: auto;
     }
 
-    #content{
-        display:block;
+    #content {
+        display: block;
+        height: auto;
     }
 
     #notInMenu {
         padding: 8px;
     }
 
-    /* Shrink top bar */
     #topBar {
+        position: static;
         height: auto;
-        min-height: 56px;
-        align-items: center;
+        min-height: unset;
         padding: 10px;
         justify-content: center;
     }
@@ -253,10 +257,10 @@ img {
         margin: 6px 0;
     }
 
-    /* Carousel / slider */
     #slider {
         width: 100%;
         height: auto;
+        min-height: 300px;
     }
 
     .carousel-inner,
@@ -289,10 +293,6 @@ img {
         height: auto;
         flex-wrap: wrap;
         padding: 10px;
-    }
-    #menu.active {
-        display: flex;
-        flex-direction: column;
     }
     #menu.active {
         display: flex;
