@@ -201,3 +201,99 @@ h4{
     display: flex;
     align-items: center;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   MOBILE STYLES
+   ========================= */
+@media (max-width: 768px) {
+
+    /* Top bar */
+    #topBar {
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    #logo {
+        height: 60px;
+    }
+
+    /* Stack layout instead of side-by-side */
+    #content,
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Navigation menu */
+    #pages,
+    #menu {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .btn-light,
+    .btn-light2 {
+        width: 100%;
+        height: auto;
+        font-size: 1rem !important;
+        margin: 6px 0;
+    }
+
+    /* Carousel / slider */
+    #slider {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    /* About page layout */
+    #aboutText {
+        padding: 5%;
+        font-size: 1rem;
+    }
+
+    #section {
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+    }
+
+    #profilePic {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    /* Footer */
+    #horizontalFooter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #socials {
+        padding: 10px 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
