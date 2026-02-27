@@ -1,4 +1,7 @@
-
+html, body {
+    height: 100%;
+    margin: 0;
+}
 @font-face {
     font-family: 'Engineering Plot';
     src: url('./fonts/Engplot.TTF') format('truetype');
