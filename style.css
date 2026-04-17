@@ -27,6 +27,10 @@ h4{
 #notInMenu{
     margin-right: auto;
 }
+
+#statement{
+    font-size: medium;
+}
 #topBar{
     top: 0;
     position: fixed;
@@ -43,6 +47,10 @@ h4{
     justify-content: right;
 }
 
+#MaxMynStatement{
+    margin-top: 5%;
+    text-align: center;
+}
 #menu{
     border: #ffffff solid 3px;
     height: 13%;
@@ -127,6 +135,7 @@ h4{
     font-family: 'Engineering Plot', serif !important;
 }
 #slider {
+    margin-top: 20px;
     height: 695px;
     width: 81%;
 }
@@ -216,17 +225,62 @@ img {
     max-width: 100%;
     height: auto;
 }
+.scroller {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 3px solid rgba(242, 239, 240, 0.1);
+    padding: 24px;
+}
 
+.textHolder {
+    color: #072b60;
+    display: inline-block;
+    font-size: larger;
+    padding-left: 100%;
+    animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+#aboutBtn{
+    border-radius: 25%;
+    width: 100%;
+    height: 40% !important;
+    background-image:url("MYImages/MaxImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* =========================
    MOBILE STYLES
    ========================= */
 @media (max-width: 768px) {
+    #mainContainer{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
     .menuBarClass {
         height: 32px;
         width: auto;
         margin-right: auto;
     }
-
+    #aboutBtnHolder{
+        width: 100%;
+        height: 250px !important;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    #aboutBtn{
+        height:90% !important;
+        width: 78% !important;
+    }
     #content {
         display: block;
         height: auto;
@@ -241,14 +295,19 @@ img {
         height: auto;
         min-height: unset;
         padding: 10px;
-        justify-content: center;
+        justify-content: left;
+        margin: 0 !important;
+        border: none !important;
     }
 
     #logo {
         height: 60px;
     }
 
-
+    .scroller{
+        height:13% !important;
+        width: 100% !important;
+    }
     .btn-light,
     .btn-light2 {
         width: 100%;
@@ -272,10 +331,14 @@ img {
     }
 
     /* Footer */
+    #footer{
+        padding-top: 0 !important;
+        height: 100%;
+    }
     #horizontalFooter {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
 
     #socials {
@@ -320,7 +383,12 @@ img {
     }
 
     #profilePic {
-        max-width: 250px;
-        margin: 0 auto 12px;
+        border-radius: 15%;
+        width: auto;
+     height: auto;
     }
+    #section{
+        width: 100%;
+    }
+
 }
